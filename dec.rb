@@ -4,7 +4,7 @@ require "lockbox"
 files = []
 
 Dir.foreach(".") do |f|
-   next if f == "enc.rb" ||  f.start_with?(".") ||  f == "TheKey.key" || f == "dec.rb"
+   next if f == "enc.rb" ||  f.start_with?(".") ||  f == "TheKey.key" || f == "dec.rb" || !File.file?(f)
    files.push(f)
 end
 
